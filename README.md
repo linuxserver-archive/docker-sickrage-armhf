@@ -11,7 +11,7 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
 
 # lsioarmhf/sickrage
-[![](https://images.microbadger.com/badges/image/lsioarmhf/sickrage.svg)](http://microbadger.com/images/lsioarmhf/sickrage "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/sickrage.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/sickrage.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-sickrage)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-sickrage/)
+[![](https://images.microbadger.com/badges/version/lsioarmhf/sickrage.svg)](https://microbadger.com/images/lsioarmhf/sickrage "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/sickrage.svg)](http://microbadger.com/images/lsioarmhf/sickrage "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/sickrage.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/sickrage.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-sickrage)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-sickrage/)
 [hub]: https://hub.docker.com/r/lsioarmhf/sickrage/
 
 Automatic Video Library Manager for TV Shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic. [Sickrage](https://sickrage.github.io/)
@@ -65,10 +65,17 @@ Web interface is at `<your ip>:8081` , set paths for downloads, tv-shows to matc
 
 * To monitor the logs of the container in realtime `docker logs -f sickrage`.
 
+* container version number 
 
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' sickrage`
+
+* image version number
+
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' lsioarmhf/sickrage`
 
 ## Versions
 
++ **14-10-16:** Add version layer information.
 + **30.09.16:** Fix umask.
 + **11.09.16:** Add layer badges to README.
 + **07.09.16:** Initial Release
