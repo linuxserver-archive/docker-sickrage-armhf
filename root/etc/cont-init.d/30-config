@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 
-cd /config 
+cd /config || exit
 
 # permissions
 chown -R abc:abc \
