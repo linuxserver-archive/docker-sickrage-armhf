@@ -1,5 +1,8 @@
 #!/usr/bin/with-contenv bash
 
+
+cd /config 
+
 # permissions
 chown -R abc:abc \
 	/app \
